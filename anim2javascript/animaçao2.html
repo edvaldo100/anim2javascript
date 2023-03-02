@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ANIMAÇÃO 2 </title>
+    <style>
+       .conteudo h1 span{
+        font-size: 15px;
+        cursor: pointer;
+       }
+       .conteudo p {
+        overflow: hidden;
+        height: 0px;
+       }
+       .mostrar{
+        height: 100px !important;
+       }
+    </style>
+</head>
+<body>
+   <div class="conteudo">
+    <h1>Titulo do Texto <span>Veja Mais!</span></h1>
+    <p id="paragrafo">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti nisi dolor necessitatibus excepturi omnis accusantium. Nostrum sequi, repellendus quae, ipsa quia repudiandae nobis corporis voluptatem eius ipsum asperiores qui exercitationem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, deleniti! Perferendis quas beatae, laborum eius error numquam mollitia impedit maxime fuga cupiditate placeat accusantium odit omnis, harum eos dolorem quo.</p>
+   </div>
+
+   <script>
+    var span =document.querySelector('.conteudo span')  
+    span.addEventListener('click',()=>{
+        var conteudo = document.querySelector('.conteudo p')
+        var texto = document.querySelector('#paragrafo')
+        if(conteudo.classList.contains('mostrar')){
+            span.innerHTML = 'veja mais'
+            texto.style.color ='blue'
+            conteudo.classList.remove('mostrar')
+        }else{
+            span.innerHTML = 'ocultar'
+            conteudo.classList.add('mostrar')
+        }
+    })
+
+  
+
+   </script>
+</body>
+</html>
